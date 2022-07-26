@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+.current {
+    background-color:black;
+}
+
+.main {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 10px auto ;
+    overflow: hidden;
+}
+.main a {
+    text-decoration: none;
+}
+.arrow-l,
+.arrow-r {
+    display: none;
+    position: absolute;
+    top:50%;
+    margin-top:-20px;
+    width: 24px;
+    height: 40px;
+    background:rgba(0,0,0,.3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'icomoon';
+    font-size: 30px;
+    z-index:100;    /*因为ul在它的下面，层叠性的话，ul定位后会把arrow-l，-r覆盖*/
+}
+.arrow-r {
+    right: 0;
+}
+
+.main ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:900%;
+}
+.main ul li {
+    float: left;
+}
+.main ul li img {
+    width: 800px;
+    height: 500px;
+}
+
+.circle {
+    position:absolute;
+    left: 45%;
+    top: 95%;
+    margin-left:-50px ;
+}
+.circle>li {
+    float:left;
+    width: 20px;
+    height: 20px;
+    margin-left:10px ;
+    /* 为什么跑到下面去了:浮动相当于行内块 */
+    border-radius: 50%;
+    background-color: #fff;
+    
+}
